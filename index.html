@@ -269,13 +269,13 @@
 
     <script>
         const astronaut = document.getElementById('astronaut');
-	const linksAndButtons = document.querySelectorAll('nav a, .btn');
+	const linksAndButtons = document.querySelectorAll('nav a, .btn, #hero a');
 
 	document.addEventListener('mousemove', (event) => {
 		const x = event.clientX - 70; 
 		const y = event.pageY - 300;
 		
-		if (event.target.matches('nav a') || event.target.matches('.btn')) {
+		if (event.target.matches('nav a') || event.target.matches('.btn') || event.target.matches('#hero a')) {
 			astronaut.style.display = 'block'; 
 			astronaut.style.transform = `translate(${x}px, ${y}px)`;
 			
