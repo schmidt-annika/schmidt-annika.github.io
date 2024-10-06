@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Annika_Schmidt_Portfolio</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
     <style>
@@ -280,7 +280,7 @@
 			astronaut.style.transform = `translate(${x}px, ${y}px)`;
 			
 			const backgroundColor = getComputedStyle(event.target).backgroundColor;
-			const rgb = backgroundColor.match(/\d+/g); // RGB-Werte extrahieren
+			const rgb = backgroundColor.match(/\d+/g);
 			const brightness = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255; 
 
 			astronaut.style.filter = brightness < 0.5 ? 'invert(1)' : 'invert(0)';
@@ -292,7 +292,7 @@
 	sections.forEach(section => {
 		section.addEventListener('mouseleave', () => {
 			astronaut.style.display = 'none'; 
-			astronaut.style.filter = 'invert(0)'; // Zurücksetzen der Invertierung
+			astronaut.style.filter = 'invert(0)';
 		});
 	});
     </script>
