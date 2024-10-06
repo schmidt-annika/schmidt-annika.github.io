@@ -1,10 +1,284 @@
-<html>
-  <head>
-    <title>
-      Annika Schmidt
-    </title>
-  </head>
-  <body>
-    <h1>Annika Schmidt</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon hinzufügen -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1.1rem;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #004d5a; /* Petrol */
+            padding: 1rem 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #003e4f; /* Dark Petrol */
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #24543f; /* Forest Green */
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative; /* Relative Positionierung */
+			z-index: 1;
+        }
+
+        #astronaut {
+            position: absolute; /* Absolute Positionierung */
+            width: 100px; /* Größe anpassen */
+            height: auto; /* Höhe automatisch anpassen */
+            pointer-events: none; /* Das Bild soll keine Mausinteraktionen haben */
+            display: none; /* Bild standardmäßig ausblenden */
+            z-index: 10; /* Bild über anderen Elementen anzeigen */
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+			z-index: 2;
+        }
+
+        #hero p {
+            font-size: 1.25rem;
+			z-index: 2;
+        }
+		
+		#portrait {
+			position: absolute; /* Absolute Positionierung */
+			bottom: 0; /* Oben ausrichten */
+			left: 0; /* Links ausrichten */
+			margin-left: 200px; /* Überlappung mit dem W von Welcome (negativer Wert) */
+			width: 200px; /* Größe des Portraits */
+			height: auto; /* Höhe automatisch anpassen */
+			z-index: 0; /* Sicherstellen, dass es über anderen Inhalten liegt */
+		}
+
+
+        /* Sections */
+        section {
+            padding: 3rem 2rem;
+            text-align: center;
+            background-color: #fff;
+            margin: 2rem 0;
+        }
+
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Coding Section */
+        #coding {
+            background-color: #fff; 
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        #coding p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #about p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #004d5a; /* Petrol */
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #003e4f; /* Dark Petrol */
+        }
+
+        /* Books Section */
+        .books-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .book-item {
+            text-align: center;
+        }
+
+        .book-item img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        /* Video Section */
+        .video-container {
+            margin: 1.5rem 0;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d5a;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#coding">Coding</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+	<section id="hero">
+		<h1>Welcome to My Portfolio</h1>
+		<p>Programming | Writing | Video Production</p>
+		<img src="portrait.png" alt="Portrait" id="portrait"> <!-- Portraitbild hinzufügen -->
+		<img src="astronaut.png" alt="Astronaut" id="astronaut"> <!-- Astronaut -->
+	</section>
+    
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Annika, a programmer, author, and video creator from Germany. <br />
+		I love anything that combines creative work and logic - and I love pizza.
+        Welcome to my portfolio!</p>
+    </section>
+
+    <!-- Coding Section (Short Info + GitHub Link) -->
+    <section id="coding">
+        <h2>My Coding Projects</h2>
+        <p>
+            I work on a variety of coding projects, ranging from dealing with scientific problems to hobby apps and school projects.  <br />
+            You can check out my work and repositories on GitHub.
+        </p>
+        <a href="https://github.com/schmidt-annika" target="_blank" class="btn">Visit my GitHub</a>
+    </section>
+
+    <!-- Books Section with Two Covers -->
+    <section id="books">
+        <h2>Published Books</h2>
+        <div class="books-container">
+            <div class="book-item">
+                <img src="https://images.thalia.media/00/-/e6f35af6873748108d2a44a8e5cff1c0/der-climber-life-is-a-story-story-one-gebundene-ausgabe-annika-schmidt.jpeg" alt="Der Climber">
+                <p>Der Climber</p>
+            </div>
+            <div class="book-item">
+                <img src="https://images.thalia.media/-/BF2000-2000/b6d36cba2f2b4092960f755fd510619c/ueber-tradition-mission-und-erkenntnis-life-is-a-story-story-one-gebundene-ausgabe-annika-schmidt.jpeg" alt="Über Tradition, Mission und Erkenntnis">
+                <p>Über Tradition,  <br />
+                Mission und Erkenntnis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Section with One Video -->
+    <section id="youtube">
+        <h2>My YouTube-Channel</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sBzQayZef2k?si=tQZGgNdDYP6mzfYx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Newest Video: Gemäßigte Zone- was du dazu wissen musst! | Annication</p>
+        </div>
+        <a href="https://www.youtube.com/@annication?app=desktop" target="_blank" class="btn">Visit my Channel</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:info@annication.de">info@annication.de</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Annika Schmidt. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const astronaut = document.getElementById('astronaut');
+		const linksAndButtons = document.querySelectorAll('nav a, .btn');
+
+		document.addEventListener('mousemove', (event) => {
+			const x = event.clientX - 70; // Position näher zur Maus
+			const y = event.pageY - 300; // Position näher zur Maus
+			
+			// Überprüfen, ob die Maus über Links oder Buttons ist
+			if (event.target.matches('nav a') || event.target.matches('.btn')) {
+				astronaut.style.display = 'block'; // Astronaut anzeigen
+				astronaut.style.transform = `translate(${x}px, ${y}px)`; // Astronaut folgt der Maus
+				
+				// Überprüfen des Hintergrunds des Ziels
+				const backgroundColor = getComputedStyle(event.target).backgroundColor;
+				const rgb = backgroundColor.match(/\d+/g); // RGB-Werte extrahieren
+				const brightness = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255; // Helligkeit berechnen
+
+				// Invertieren der Farben, wenn der Hintergrund nicht hell ist
+				astronaut.style.filter = brightness < 0.5 ? 'invert(1)' : 'invert(0)'; // Invertiere bei dunklem Hintergrund
+			} else {
+				astronaut.style.display = 'none'; // Astronaut ausblenden
+			}
+		});
+
+		// Verstecken des Astronauten, wenn der Mauszeiger die Sektion verlässt
+		sections.forEach(section => {
+			section.addEventListener('mouseleave', () => {
+				astronaut.style.display = 'none'; // Astronaut ausblenden
+				astronaut.style.filter = 'invert(0)'; // Zurücksetzen der Invertierung
+			});
+		});
+    </script>
+</body>
 </html>
