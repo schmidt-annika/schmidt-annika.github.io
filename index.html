@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-	<link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon hinzufügen -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
     <style>
         /* Basic Reset */
@@ -25,7 +25,7 @@
 
         /* Navigation Bar */
         nav {
-            background-color: #004d5a; /* Petrol */
+            background-color: #004d5a;
             padding: 1rem 2rem;
         }
 
@@ -44,49 +44,58 @@
         }
 
         nav ul li a:hover {
-            color: #003e4f; /* Dark Petrol */
+            color: #003e4f;
         }
 
         /* Hero Section */
         #hero {
-            background-color: #24543f; /* Forest Green */
+            background-color: #004d5a;
             color: #fff;
             padding: 3rem 2rem;
             text-align: center;
-            position: relative; /* Relative Positionierung */
-			z-index: 1;
+            position: relative;
         }
 
         #astronaut {
-            position: absolute; /* Absolute Positionierung */
-            width: 100px; /* Größe anpassen */
-            height: auto; /* Höhe automatisch anpassen */
-            pointer-events: none; /* Das Bild soll keine Mausinteraktionen haben */
-            display: none; /* Bild standardmäßig ausblenden */
-            z-index: 10; /* Bild über anderen Elementen anzeigen */
+            position: absolute; 
+            width: 100px;
+            height: auto; 
+            pointer-events: none; 
+            display: none; 
+            z-index: 10; 
         }
 
         #hero h1 {
             font-size: 3rem;
             margin-bottom: 0.5rem;
             font-family: 'Montserrat', sans-serif;
-			z-index: 2;
         }
 
         #hero p {
             font-size: 1.25rem;
-			z-index: 2;
+	    color: #fff;
         }
+	#hero a {
+            font-size: 1.25rem;
+	    color: #fff;
+	    text-decoration: none;
+	    transition: color 0.3s;
+        }
+
+        #hero a:hover {
+            color: #003e4f;
+        }
+
+	    
 		
-		#portrait {
-			position: absolute; /* Absolute Positionierung */
-			bottom: 0; /* Oben ausrichten */
-			left: 0; /* Links ausrichten */
-			margin-left: 200px; /* Überlappung mit dem W von Welcome (negativer Wert) */
-			width: 200px; /* Größe des Portraits */
-			height: auto; /* Höhe automatisch anpassen */
-			z-index: 0; /* Sicherstellen, dass es über anderen Inhalten liegt */
-		}
+	#portrait {
+		position: absolute; 
+		bottom: 0;
+		left: 0; 
+		margin-left: 200px;
+		width: 200px; 
+		height: auto;
+	}
 
 
         /* Sections */
@@ -122,7 +131,7 @@
 
         /* Button Styling */
         .btn {
-            background-color: #004d5a; /* Petrol */
+            background-color: #004d5a; 
             color: #fff;
             padding: 0.75rem 1.5rem;
             text-decoration: none;
@@ -131,7 +140,7 @@
         }
 
         .btn:hover {
-            background-color: #003e4f; /* Dark Petrol */
+            color: #003e4f;
         }
 
         /* Books Section */
@@ -144,6 +153,17 @@
         .book-item {
             text-align: center;
         }
+
+	.book-item a{
+            color: black;
+	    text-decoration: none;
+	    transition: color 0.3s;
+        }
+
+	.book-item a:hover {
+            color: #003e4f;
+        }
+
 
         .book-item img {
             width: 150px;
@@ -179,7 +199,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#coding">Coding</a></li>
             <li><a href="#books">Books</a></li>
-            <li><a href="#youtube">YouTube</a></li>
+            <li><a href="#youtube">Videos</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -187,22 +207,22 @@
     <!-- Hero Section -->
 	<section id="hero">
 		<h1>Welcome to My Portfolio</h1>
-		<p>Programming | Writing | Video Production</p>
-		<img src="portrait.png" alt="Portrait" id="portrait"> <!-- Portraitbild hinzufügen -->
-		<img src="astronaut.png" alt="Astronaut" id="astronaut"> <!-- Astronaut -->
+		<p><a href="#coding">Programming</a> | <a href="#books">Writing</a> | <a href="#youtube">Video Production</a></p>
+		<img src="portrait.png" alt="Portrait" id="portrait">
+		<img src="astronaut.png" alt="Astronaut" id="astronaut"> 
 	</section>
     
     <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Annika, a programmer, author, and video creator from Germany. <br />
-		I love anything that combines creative work and logic - and I love pizza.
+        <p>Hi! I'm Annika, a developer, author, and video creator living in Germany. <br />
+		I love anything that combines creative work and logic – and I love pizza.
         Welcome to my portfolio!</p>
     </section>
 
-    <!-- Coding Section (Short Info + GitHub Link) -->
+    <!-- Coding Section -->
     <section id="coding">
-        <h2>My Coding Projects</h2>
+        <h2>Coding Projects</h2>
         <p>
             I work on a variety of coding projects, ranging from dealing with scientific problems to hobby apps and school projects.  <br />
             You can check out my work and repositories on GitHub.
@@ -210,25 +230,25 @@
         <a href="https://github.com/schmidt-annika" target="_blank" class="btn">Visit my GitHub</a>
     </section>
 
-    <!-- Books Section with Two Covers -->
+    <!-- Books Section -->
     <section id="books">
         <h2>Published Books</h2>
         <div class="books-container">
             <div class="book-item">
                 <img src="https://images.thalia.media/00/-/e6f35af6873748108d2a44a8e5cff1c0/der-climber-life-is-a-story-story-one-gebundene-ausgabe-annika-schmidt.jpeg" alt="Der Climber">
-                <p>Der Climber</p>
+                <p><a href="https://www.thalia.de/shop/home/artikeldetails/A1066033150">Der Climber</a></p>
             </div>
             <div class="book-item">
                 <img src="https://images.thalia.media/-/BF2000-2000/b6d36cba2f2b4092960f755fd510619c/ueber-tradition-mission-und-erkenntnis-life-is-a-story-story-one-gebundene-ausgabe-annika-schmidt.jpeg" alt="Über Tradition, Mission und Erkenntnis">
-                <p>Über Tradition,  <br />
-                Mission und Erkenntnis</p>
+                <p><a href="https://www.thalia.de/shop/home/artikeldetails/A1069366483">Über Tradition,  <br />
+                Mission und Erkenntnis</a></p>
             </div>
         </div>
     </section>
 
-    <!-- YouTube Section with One Video -->
+    <!-- YouTube Section -->
     <section id="youtube">
-        <h2>My YouTube-Channel</h2>
+        <h2>YouTube-Channel</h2>
         <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/sBzQayZef2k?si=tQZGgNdDYP6mzfYx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <p>Newest Video: Gemäßigte Zone- was du dazu wissen musst! | Annication</p>
@@ -249,36 +269,32 @@
 
     <script>
         const astronaut = document.getElementById('astronaut');
-		const linksAndButtons = document.querySelectorAll('nav a, .btn');
+	const linksAndButtons = document.querySelectorAll('nav a, .btn');
 
-		document.addEventListener('mousemove', (event) => {
-			const x = event.clientX - 70; // Position näher zur Maus
-			const y = event.pageY - 300; // Position näher zur Maus
+	document.addEventListener('mousemove', (event) => {
+		const x = event.clientX - 70; 
+		const y = event.pageY - 300;
+		
+		if (event.target.matches('nav a') || event.target.matches('.btn')) {
+			astronaut.style.display = 'block'; 
+			astronaut.style.transform = `translate(${x}px, ${y}px)`;
 			
-			// Überprüfen, ob die Maus über Links oder Buttons ist
-			if (event.target.matches('nav a') || event.target.matches('.btn')) {
-				astronaut.style.display = 'block'; // Astronaut anzeigen
-				astronaut.style.transform = `translate(${x}px, ${y}px)`; // Astronaut folgt der Maus
-				
-				// Überprüfen des Hintergrunds des Ziels
-				const backgroundColor = getComputedStyle(event.target).backgroundColor;
-				const rgb = backgroundColor.match(/\d+/g); // RGB-Werte extrahieren
-				const brightness = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255; // Helligkeit berechnen
+			const backgroundColor = getComputedStyle(event.target).backgroundColor;
+			const rgb = backgroundColor.match(/\d+/g); // RGB-Werte extrahieren
+			const brightness = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255; 
 
-				// Invertieren der Farben, wenn der Hintergrund nicht hell ist
-				astronaut.style.filter = brightness < 0.5 ? 'invert(1)' : 'invert(0)'; // Invertiere bei dunklem Hintergrund
-			} else {
-				astronaut.style.display = 'none'; // Astronaut ausblenden
-			}
-		});
+			astronaut.style.filter = brightness < 0.5 ? 'invert(1)' : 'invert(0)';
+		} else {
+			astronaut.style.display = 'none';
+		}
+	});
 
-		// Verstecken des Astronauten, wenn der Mauszeiger die Sektion verlässt
-		sections.forEach(section => {
-			section.addEventListener('mouseleave', () => {
-				astronaut.style.display = 'none'; // Astronaut ausblenden
-				astronaut.style.filter = 'invert(0)'; // Zurücksetzen der Invertierung
-			});
+	sections.forEach(section => {
+		section.addEventListener('mouseleave', () => {
+			astronaut.style.display = 'none'; 
+			astronaut.style.filter = 'invert(0)'; // Zurücksetzen der Invertierung
 		});
+	});
     </script>
 </body>
 </html>
