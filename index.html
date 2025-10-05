@@ -73,13 +73,14 @@
 
         #hero p {
             font-size: 1.25rem;
-	    color: #fff;
+			color: #fff;
         }
-	#hero a {
+		
+		#hero a {
             font-size: 1.25rem;
-	    color: #fff;
-	    text-decoration: none;
-	    transition: color 0.3s;
+			color: #fff;
+			text-decoration: none;
+			transition: color 0.3s;
         }
 
         #hero a:hover {
@@ -88,14 +89,14 @@
 
 	    
 		
-	#portrait {
-		position: absolute; 
-		bottom: 0;
-		left: 0; 
-		margin-left: 200px;
-		width: 200px; 
-		height: auto;
-	}
+		#portrait {
+			position: absolute; 
+			bottom: 0;
+			left: 0; 
+			margin-left: 200px;
+			width: 200px; 
+			height: auto;
+		}
 
 
         /* Sections */
@@ -119,15 +120,13 @@
             text-align: center;
         }
 
-        #coding p {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-        }
+        #about p,
+		#coding p,
+		#youtube p {
+			font-size: 1.25rem;
+			margin-bottom: 1.5rem;
+		}
 
-        #about p {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-        }
 
         /* Button Styling */
         .btn {
@@ -143,53 +142,16 @@
             color: #003e4f;
         }
 
-        /* Books Section */
-        .books-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
+		footer {
+			text-align: center;
+			padding: 1.5rem 0;
+			background-color: #004d5a;
+			background-color: #004d5a;
+			color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			position: relative;
+		}
 
-        .book-item {
-            text-align: center;
-        }
-
-	.book-item a{
-            color: black;
-	    text-decoration: none;
-	    transition: color 0.3s;
-        }
-
-	.book-item a:hover {
-            color: #003e4f;
-        }
-
-
-        .book-item img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        /* Video Section */
-        .video-container {
-            margin: 1.5rem 0;
-        }
-
-        .video-container iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 315px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #004d5a;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
     </style>
 </head>
 <body>
@@ -198,7 +160,6 @@
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#coding">Coding</a></li>
-            <li><a href="#books">Books</a></li>
             <li><a href="#youtube">Videos</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -215,56 +176,41 @@
     <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Annika, a developer, author, and video creator living in Germany. <br />
-		I love anything that combines creative work and logic – and I love pizza.
-        Welcome to my portfolio!</p>
+        <p>
+			Hi! I'm Annika, a developer, author, and video creator living in Germany. <br />
+			I love anything that combines creative work and logic – and I love pizza. Welcome to my portfolio!
+		</p>
     </section>
 
     <!-- Coding Section -->
     <section id="coding">
         <h2>Coding Projects</h2>
         <p>
-            I work on a variety of coding projects, ranging from dealing with scientific problems to hobby apps and school projects.  <br />
+            I work on a variety of coding projects, ranging from dealing with scientific problems to hobby apps and college projects.  <br />
             You can check out my work and repositories on GitHub.
         </p>
         <a href="https://github.com/schmidt-annika" target="_blank" class="btn">Visit my GitHub</a>
     </section>
 
-    <!-- Books Section -->
-    <section id="books">
-        <h2>Published Books</h2>
-        <div class="books-container">
-            <div class="book-item">
-                <img src="https://images.thalia.media/00/-/e6f35af6873748108d2a44a8e5cff1c0/der-climber-life-is-a-story-story-one-gebundene-ausgabe-annika-schmidt.jpeg" alt="Der Climber">
-                <p><a href="https://www.thalia.de/shop/home/artikeldetails/A1066033150">Der Climber</a></p>
-            </div>
-            <div class="book-item">
-                <img src="https://images.thalia.media/-/BF2000-2000/b6d36cba2f2b4092960f755fd510619c/ueber-tradition-mission-und-erkenntnis-life-is-a-story-story-one-gebundene-ausgabe-annika-schmidt.jpeg" alt="Über Tradition, Mission und Erkenntnis">
-                <p><a href="https://www.thalia.de/shop/home/artikeldetails/A1069366483">Über Tradition,  <br />
-                Mission und Erkenntnis</a></p>
-            </div>
-        </div>
-    </section>
-
     <!-- YouTube Section -->
     <section id="youtube">
         <h2>YouTube-Channel</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sBzQayZef2k?si=tQZGgNdDYP6mzfYx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p>Newest Video: Gemäßigte Zone- was du dazu wissen musst! | Annication</p>
-        </div>
+		<p>
+			On my channel, I mainly cover computer science topics, breaking them down into easy-to-understand videos   <br />
+			to help students, developers and curious minds learn and grow.
+		</p>
         <a href="https://www.youtube.com/@annication?app=desktop" target="_blank" class="btn">Visit my Channel</a>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:info@annication.de">info@annication.de</a></p>
+        <p>Email: <a href="mailto:info@annika-schmidt.net">info@annika-schmidt.net</a></p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Annika Schmidt. All Rights Reserved.</p>
+        <p>&copy; 2025 Annika Schmidt. All Rights Reserved.</p>
     </footer>
 
     <script>
